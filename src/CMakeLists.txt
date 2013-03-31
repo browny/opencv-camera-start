@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 2.8)
+
+INCLUDE_DIRECTORIES(../include/)
+ADD_EXECUTABLE(main main.cpp capture.cpp)
+
+FIND_PACKAGE(OpenCV REQUIRED)
+TARGET_LINK_LIBRARIES(main ${OpenCV_LIBS})
+
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
